@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1= title
+  p create your message
+
+  form(method="POST" action="/new")
+    .form-group
+      label(for = user) User:
+      input#user.form-control(type="text", placeholder="Username" name="user")
+      br
+    .form-group
+      label(for = message) Text:
+      input#message.form-control(type = "text", placeholder="type your comment this is super awesome.", name="message")
+      br
+      button(type="submit") Submit
+
+  a(href="/") go back.
